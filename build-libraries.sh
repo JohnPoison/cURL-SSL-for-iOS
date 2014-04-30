@@ -31,16 +31,16 @@ fi
 mkdir -p "${BUILD_PATH}/OpenSSL/Headers/"
 mkdir -p "${BUILD_PATH}/cURL/Headers/"
 
-cd "${CURRENTPATH}/OpenSSL/"
-/bin/sh build-libssl.sh
+#cd "${CURRENTPATH}/OpenSSL/"
+#/bin/sh build-libssl.sh
 cd "${CURRENTPATH}/cURL/"
 /bin/sh build-libcurl.sh
 
 echo "Copy libraries to 'lib' directory."
 
 cp -p "${CURRENTPATH}/OpenSSL/libcrypto.a" "${BUILD_PATH}/OpenSSL"
-cp -p "${CURRENTPATH}/OpenSSL/libssl.a" "${BUILD_PATH}/OpenSSL"
-cp -Rp "${CURRENTPATH}/OpenSSL/include/openssl" "${BUILD_PATH}/OpenSSL/Headers/"
+#cp -p "${CURRENTPATH}/OpenSSL/libssl.a" "${BUILD_PATH}/OpenSSL"
+#cp -Rp "${CURRENTPATH}/OpenSSL/include/openssl" "${BUILD_PATH}/OpenSSL/Headers/"
 
 cp -p "${CURRENTPATH}/cURL/libcurl.a" "${BUILD_PATH}/cURL"
 cp -Rp "${CURRENTPATH}/cURL/include/curl" "${BUILD_PATH}/cURL/Headers/"
